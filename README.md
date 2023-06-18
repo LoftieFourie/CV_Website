@@ -16,7 +16,6 @@ Features
 Technologies Used
 ------------------------------
 - React: A popular JavaScript library for building user interfaces.
-- Next.js: A framework for server-rendered React applications with built-in routing and other features.
 - CSS Modules: Modular CSS approach to maintain styles for individual components.
 - HTML5: Markup language for structuring and presenting content on the web.
 - JavaScript: Programming language used for client-side functionality.
