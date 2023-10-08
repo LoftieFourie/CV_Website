@@ -1,5 +1,6 @@
 import React from 'react';
 import './exp.css';
+import { Link } from 'react-router-dom';
 
 function Info() {
     return (
@@ -54,22 +55,14 @@ function Info() {
 }
 
 function APJExp() {
-    const goHome = () => {
-        // Construct the URL based on the clicked sub-card's name
-        const url = `../Home`;
-
-        // Navigate to the URL
-        window.location.href = url;
-    };
-
     return (
         <div>
             {/* Fixed bar at the top */}
             <div className='fixed-bar'>
-                <button className='back-button' onClick={() => goHome()}>
+                <Link to='../Home' className='link-as-text'>
                     Home
-                </button>
-                <h1 className='title'>APJ Automation</h1>
+                </Link>
+                <h1 className='title'>AMA</h1>
             </div>
 
             {/* Render the AmaProject component */}

@@ -9,6 +9,7 @@ import AMA6 from '../assets/AMA/AMA6.png';
 import AMA7 from '../assets/AMA/AMA7.png';
 import AMA8 from '../assets/AMA/AMA8.png';
 import AMA9 from '../assets/AMA/AMA9.png';
+import { Link } from 'react-router-dom';
 
 function Info() {
     return (
@@ -124,21 +125,13 @@ function Info() {
 }
 
 function AmaProject() {
-    const goHome = () => {
-        // Construct the URL based on the clicked sub-card's name
-        const url = `../Home`;
-
-        // Navigate to the URL
-        window.location.href = url;
-    };
-
     return (
         <div>
             {/* Fixed bar at the top */}
             <div className='fixed-bar'>
-                <button className='back-button' onClick={() => goHome()}>
+                <Link to='../Home' className='link-as-text'>
                     Home
-                </button>
+                </Link>
                 <h1 className='title'>AMA</h1>
             </div>
 

@@ -5,6 +5,7 @@ import bfm2 from '../assets/bfm/BFM2.png';
 import bfm3 from '../assets/bfm/BFM3.png';
 import bfm4 from '../assets/bfm/BFM4.png';
 import bfm5 from '../assets/bfm/BFM5.png';
+import { Link } from 'react-router-dom';
 
 function Info() {
     return (
@@ -106,21 +107,13 @@ function Info() {
 }
 
 function BFMProject() {
-    const goHome = () => {
-        // Construct the URL based on the clicked sub-card's name
-        const url = `../Home`;
-
-        // Navigate to the URL
-        window.location.href = url;
-    };
-
     return (
         <div>
             {/* Fixed bar at the top */}
             <div className='fixed-bar'>
-                <button className='back-button' onClick={() => goHome()}>
+                <Link to='../Home' className='link-as-text'>
                     Home
-                </button>
+                </Link>
                 <h1 className='title'>BFM</h1>
             </div>
 

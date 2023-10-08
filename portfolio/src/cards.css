@@ -105,3 +105,8 @@
         order: 0; /* Reset the order to its original value */
     }
 }
+
+.link-as-text {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent element */
+}

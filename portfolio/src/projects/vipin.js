@@ -1,5 +1,6 @@
 import React from 'react';
 import './projects.css';
+import { Link } from 'react-router-dom';
 
 function Info() {
     return (
@@ -35,21 +36,13 @@ function Info() {
 }
 
 function VipinProject() {
-    const goHome = () => {
-        // Construct the URL based on the clicked sub-card's name
-        const url = `../Home`;
-
-        // Navigate to the URL
-        window.location.href = url;
-    };
-
     return (
         <div>
             {/* Fixed bar at the top */}
             <div className='fixed-bar'>
-                <button className='back-button' onClick={() => goHome()}>
+                <Link to='../Home' className='link-as-text'>
                     Home
-                </button>
+                </Link>
                 <h1 className='title'>VIPIN Development</h1>
             </div>
 

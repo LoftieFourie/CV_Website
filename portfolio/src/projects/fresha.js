@@ -10,6 +10,7 @@ import fresh7 from '../assets/fresh/Fresh7.png';
 import fresh8 from '../assets/fresh/Fresh8.png';
 import fresh9 from '../assets/fresh/Fresh9.png';
 import fresh10 from '../assets/fresh/Fresh10.png';
+import { Link } from 'react-router-dom';
 
 function Info() {
     return (
@@ -111,21 +112,13 @@ function Info() {
 }
 
 function FreshaProject() {
-    const goHome = () => {
-        // Construct the URL based on the clicked sub-card's name
-        const url = `../Home`;
-
-        // Navigate to the URL
-        window.location.href = url;
-    };
-
     return (
         <div>
             {/* Fixed bar at the top */}
             <div className='fixed-bar'>
-                <button className='back-button' onClick={() => goHome()}>
+                <Link to='../Home' className='link-as-text'>
                     Home
-                </button>
+                </Link>
                 <h1 className='title'>Fresha Findings</h1>
             </div>
 

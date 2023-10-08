@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './cards.css';
+import { Link } from 'react-router-dom';
 
 function CardComponent() {
     const [activeCard, setActiveCard] = useState('all');
@@ -15,14 +16,6 @@ function CardComponent() {
             setActiveCard(cardName);
             setShowAdditionalCards(false); // Reset the additional cards visibility
         }
-    };
-
-    const handleSubCardClick = (subCardParent, subCardName) => {
-        // Construct the URL based on the clicked sub-card's name
-        const url = `./${subCardParent}/${subCardName.toLowerCase()}`;
-
-        // Navigate to the URL
-        window.location.href = url;
     };
 
     useEffect(() => {
@@ -133,12 +126,14 @@ function CardComponent() {
                                     className={`additional-card ${
                                         activeCard === card.name ? 'active-additional-card' : ''
                                     }`}
-                                    onClick={() =>
-                                        handleSubCardClick(subCard.parent, subCard.route)
-                                    } // Handle the click event
                                 >
-                                    <h3>{subCard.name}</h3>
-                                    {subCard.role && <p>{subCard.role}</p>}
+                                    <Link
+                                        to={`/${subCard.parent}/${subCard.route.toLowerCase()}`}
+                                        className='link-as-text'
+                                    >
+                                        <h3>{subCard.name}</h3>
+                                        {subCard.role && <p>{subCard.role}</p>}
+                                    </Link>
                                 </div>
                             )),
                     )}
