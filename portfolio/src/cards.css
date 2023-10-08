@@ -27,9 +27,8 @@
 }
 
 .active-card {
-    will-change: transform;
-    z-index: 1;
-    order: -1;
+    width: 100%;
+    left: 0;
 }
 
 .selected-card {
@@ -109,4 +108,10 @@
 .link-as-text {
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit the color from the parent element */
+}
+
+@media (max-width: 768px) {
+    .selected-card {
+        max-width: 95%;
+    }
 }

@@ -37,7 +37,7 @@ function Home() {
                         <strong>Location:</strong> Gauteng, South Africa
                     </p>
                     <a href={cv} download='Loftie_Fourie_CV.pdf' className='download-button'>
-                        Download PDF
+                        Download my CV
                     </a>
                 </div>
                 <div className='social-media-links'>

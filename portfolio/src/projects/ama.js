@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 function Info() {
     return (
         <div className='container'>
-            <h1>DRG Asset-Management-Application (AMA)</h1>
+            <h1>DRG Asset Management Application (AMA)</h1>
 
             <section>
                 <h2>My Role: Full Stack solo Developer</h2>
@@ -132,7 +132,6 @@ function AmaProject() {
                 <Link to='../Home' className='link-as-text'>
                     Home
                 </Link>
-                <h1 className='title'>AMA</h1>
             </div>
 
             {/* Render the AmaProject component */}

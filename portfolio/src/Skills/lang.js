@@ -109,8 +109,6 @@ function Languages() {
                 <Link to='../Home' className='link-as-text'>
                     Home
                 </Link>
-
-                <h1 className='title'>Coding Languages</h1>
             </div>
 
             {/* Render the AmaProject component */}

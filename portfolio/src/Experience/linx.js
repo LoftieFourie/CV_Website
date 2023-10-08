@@ -67,7 +67,6 @@ function LinxExp() {
                 <Link to='../Home' className='link-as-text'>
                     Home
                 </Link>
-                <h1 className='title'>AMA</h1>
             </div>
 
             {/* Render the AmaProject component */}
