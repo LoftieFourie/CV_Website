@@ -1,32 +1,43 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './index.css';
-import profilePhoto from './assets/IMG_3818.jpg';
-import Cards from './/cards.js';
+import Home from './home'; // Correct import path and filename
+import AmaProject from './projects/ama'; // Correct import path and filename
+import BFMProject from './projects/bfm';
+import FreshaProject from './projects/fresha';
+import PortfolioProject from './projects/portfolio';
+import TuneProject from './projects/tune';
+import VipinProject from './projects/vipin';
+import APJExp from './Experience/apj';
+import LinxExp from './Experience/linx';
+import ArtsInt from './Interests/arts';
+import SportsInt from './Interests/sports';
+import AchievementsSkills from './Skills/achievements';
+import Languages from './Skills/lang';
 
-// Define a functional component for the portfolio introduction
-function PortfolioIntro() {
-    return (
-    <div className="App">
-        <div className="left-column">
-            <img src={profilePhoto} alt="Your Name" className="profile-photo" />
-            <h2 className="profile-heading">Loftie Fourie</h2>
-            <h3 className="profile-subheading">Developer</h3>
-            <p className="profile-body">I am a dedicated and driven individual, always striving for continuous improvement. 
-            With excellent communication skills, I find joy in assisting others and value collaboration. 
-            During university, I embraced leadership and teamwork, ensuring successful project completion. 
-            Known for my support and loyalty, I advocate for my beliefs while remaining open-minded to diverse perspectives.</p>
-            <div className="social-media-links">
-                {/* Social media links */}
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
-                {/* Add more social media links */}
-            </div>
-        </div>
-        <Cards />
-    </div>
-    );
-}
+const App = () => (
+    <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/projects/ama' element={<AmaProject />} />
+            <Route path='/projects/BFM' element={<BFMProject />} />
+            <Route path='/projects/Fresha-Findings' element={<FreshaProject />} />
+            <Route path='/projects/Portfolio-Website' element={<PortfolioProject />} />
+            <Route path='/projects/Tune-Therapy' element={<TuneProject />} />
+            <Route path='/projects/VIPIN' element={<VipinProject />} />
+            <Route path='/experience/APJ-Automation' element={<APJExp />} />
+            <Route path='/experience/Linx' element={<LinxExp />} />
+            <Route path='/interests/Sports' element={<SportsInt />} />
+            <Route path='/interests/Arts' element={<ArtsInt />} />
+            <Route path='/skills/Achievements' element={<AchievementsSkills />} />
+            <Route path='/skills/Languages' element={<Languages />} />
+            {/* Add a route for CardComponent, if needed */}
+            <Route path='*' element={<Home />} /> {/* Default route */}
+        </Routes>
+    </BrowserRouter>
+);
 
-// Render the PortfolioIntro component to the root element
-ReactDOM.render(<PortfolioIntro />, document.getElementById('root'));
+const root = document.getElementById('root');
+const reactRoot = createRoot(root);
+reactRoot.render(<App />);
