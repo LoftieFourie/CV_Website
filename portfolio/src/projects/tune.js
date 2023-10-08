@@ -1,6 +1,6 @@
 import React from 'react';
 import './projects.css';
-import TT from '../assets/Tune/TuneTherapy.pdf';
+import TT from '../assets/Tune/Serious Game Development for Dementia Care using Preferred Music, Music Therapy.pdf';
 import TT1 from '../assets/Tune/TT1.png';
 import TT2 from '../assets/Tune/TT2.png';
 import TT3 from '../assets/Tune/TT3.png';
@@ -104,7 +104,10 @@ function Info() {
                     Below are the three screens in the game, home screen, main game, and music
                     management screen. If you would like to see the poster I used to dementstrate my
                     project you can download it{' '}
-                    <a href={TT} download='TuneTherapy.pdf'>
+                    <a
+                        href={TT}
+                        download='Serious Game Development for Dementia Care using Preferred Music, Music Therapy.pdf'
+                    >
                         HERE
                     </a>
                     <div className='bfm-grid'>

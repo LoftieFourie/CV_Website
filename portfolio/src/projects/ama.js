@@ -1,5 +1,14 @@
 import React from 'react';
 import './projects.css';
+import AMA1 from '../assets/AMA/AMA1.png';
+import AMA2 from '../assets/AMA/AMA2.png';
+import AMA3 from '../assets/AMA/AMA3.png';
+import AMA4 from '../assets/AMA/AMA4.png';
+import AMA5 from '../assets/AMA/AMA5.png';
+import AMA6 from '../assets/AMA/AMA6.png';
+import AMA7 from '../assets/AMA/AMA7.png';
+import AMA8 from '../assets/AMA/AMA8.png';
+import AMA9 from '../assets/AMA/AMA9.png';
 
 function Info() {
     return (
@@ -92,6 +101,23 @@ function Info() {
 
             <section>
                 <h2>Images of the project:</h2>
+                <p>
+                    Below are the views on the app, it also allows you to view and complete services
+                    through scanning the QR on said asset, in this case forklifts. The views include
+                    a service view, admin view, vehicle views, employee views, upload and edit
+                    views, and more
+                </p>
+                <div className='bfm-grid'>
+                    <img src={AMA1} alt='BFM' />
+                    <img src={AMA2} alt='BFM' />
+                    <img src={AMA3} alt='BFM' />
+                    <img src={AMA4} alt='BFM' />
+                    <img src={AMA5} alt='BFM' />
+                    <img src={AMA6} alt='BFM' />
+                    <img src={AMA7} alt='BFM' />
+                    <img src={AMA8} alt='BFM' />
+                    <img src={AMA9} alt='BFM' />
+                </div>
             </section>
         </div>
     );
